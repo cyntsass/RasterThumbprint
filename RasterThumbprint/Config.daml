@@ -1,0 +1,104 @@
+﻿<ArcGIS
+    defaultAssembly="RasterThumbprint.dll"
+    defaultNamespace="RasterThumbprint"
+    xmlns="http://schemas.esri.com/DADF/Registry"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://schemas.esri.com/DADF/Registry file:///C:/Users/xsascy/AppData/Local/Programs/ArcGIS/Pro/bin/ArcGIS.Desktop.Framework.xsd">
+
+	<AddInInfo
+		id="{c5f1153e-2d16-4423-9c29-def0084d9265}"
+		version="1.0"
+		desktopVersion="3.7.1901"
+		product="ArcGISPro">
+
+		<Name>Raster Thumbprint</Name>
+		<Description>Create polygon footprints from raster datasets.</Description>
+		<Image>Images\AddinDesktop32.png</Image>
+		<Author>xsascy</Author>
+		<Company>University of Gothenburg</Company>
+		<Date>9/29/2026</Date>
+		<Subject>Map Authoring</Subject>
+
+	</AddInInfo>
+
+	<modules>
+
+		<insertModule
+			id="RasterThumbprint_Module"
+			className="Module1"
+			autoLoad="false"
+			caption="Raster Thumbprint">
+
+			<!-- ===================================================== -->
+			<!-- RIBBON GROUP                                          -->
+			<!-- ===================================================== -->
+
+			<groups>
+
+				<group
+					id="RasterThumbprint_Group1"
+					caption="Makes Nice Boxes"
+					appearsOnAddInTab="true">
+
+
+					<button
+						refID="RasterThumbprint_RasterThumbprintDockpane_ShowButton"
+						size="large" />
+
+				</group>
+
+			</groups>
+
+
+			<!-- ===================================================== -->
+			<!-- BUTTON DEFINITIONS                                    -->
+			<!-- ===================================================== -->
+
+			<controls>
+
+
+
+				<!-- Opens our DockPane -->
+
+				<button
+					id="RasterThumbprint_RasterThumbprintDockpane_ShowButton"
+					caption="Raster Thumbprint"
+					className="RasterThumbprintDockpane_ShowButton"
+					loadOnClick="true"
+					smallImage="MarsCat16"
+					largeImage="MarsCat32">
+
+					<tooltip heading="Raster Thumbprint">
+						Open the Raster Thumbprint tools.
+						<disabledText />
+					</tooltip>
+
+				</button>
+
+			</controls>
+
+
+			<!-- ===================================================== -->
+			<!-- DOCKPANE                                              -->
+			<!-- ===================================================== -->
+
+			<dockPanes>
+
+				<dockPane
+					id="RasterThumbprint_RasterThumbprintDockpane"
+					caption="Raster Thumbprint"
+					smallImage="MarsCat16"
+					className="RasterThumbprintDockpaneViewModel"
+					dock="right">
+
+					<content className="RasterThumbprintDockpaneView" />
+
+				</dockPane>
+
+			</dockPanes>
+
+		</insertModule>
+
+	</modules>
+
+</ArcGIS>
