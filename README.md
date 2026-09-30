@@ -8,7 +8,7 @@ Developed at the University of Gothenburg.
 
 ## TL;DR
 
-You only need the RasterThumbprint.esriAddInX file to install Raster Thumbprint.
+Installation: You only need the RasterThumbprint.esriAddInX file to install Raster Thumbprint.
 Download the .esriAddInX file → double-click it → click Install Add-In → open/restart ArcGIS Pro.
 Raster Thumbprint will then appear under the Add-In tab.
 
